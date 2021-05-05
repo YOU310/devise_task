@@ -1,2 +1,7 @@
-<h1>Games#new</h1>
-<p>Find me in app/views/games/new.html.erb</p>
+<h1>購入商品の情報を入力</h1>
+<%= form_with model:@game, local: true do |f| %>
+  <p><%= f.label :name, "作品名" %> <%= f.text_field :name %></p>
+  <p><%= f.label :genre, "ジャンル" %> <%= f.text_field :genre %></p>
+  <%= f.submit "登録"%>
+<% end %>
+
