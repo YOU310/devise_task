@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
   def show
-    @games = Game.where(user_id: current_user.id)
+    @games = current_user.games
   end
 end

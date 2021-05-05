@@ -10,7 +10,8 @@ class GamesController < ApplicationController
   end
 
   def create
-    Game.create!(name: game_params[:name], genre: game_params[:genre], user_id: current_user.id)
+    current_user.game.create!(game_params)
+    # Game.create!(name: game_params[:name], genre: game_params[:genre], user_id: current_user.id)
     redirect_to root_path
   end
 
