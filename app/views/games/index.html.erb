@@ -1,8 +1,8 @@
 <h1>作品一覧</h1>
 <% if user_signed_in? %>
-<h3>＜タイトル：ジャンル＞</h3>
+<h3>タイトル（ジャンル）</h3>
   <% @games.each do |game| %>
-    <p><%= game.name %>：<%= game.genre %>  購入者会員No.<%= game.user.id %></p>
+    <p><%= game.name %>（<%= game.genre %>）  <%= game.user.nickname.present? ? "購入者：#{game.user.nickname}さん" : "購入者：会員No.#{game.user.id}" %></p>
   <% end %>
 <% else %>
   <p>ログインしてください</p>
