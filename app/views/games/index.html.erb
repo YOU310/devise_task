@@ -1,0 +1,8 @@
+<h1>作品一覧</h1>
+<% if user_signed_in? %>
+  <% @games.each do |game| %>
+    <p><%= game.name %>：<%= game.genre %></p>
+  <% end %>
+<% else %>
+  <p>ログインしてください</p>
+<% end %>
