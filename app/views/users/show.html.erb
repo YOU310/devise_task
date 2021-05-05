@@ -1,5 +1,6 @@
-<h1>Users#show</h1>
+<h1><%= current_user.nickname.present? ? "#{current_user.nickname}" : "会員No.#{current_user.id}" %>さんの投稿一覧</h1>
+<h3>タイトル（ジャンル）</h3>
 <% @games.each do |game| %>
-  <p><%= game.name %>：<%= game.genre %></p>
+  <p><%= game.name %>（<%= game.genre %>）</p>
 <% end %>
 
