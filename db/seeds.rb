@@ -6,8 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.first
-Game.create!(name: "スーパーマリオワールド", genre: "アクション", user_id: user.id)
-Game.create!(name: "ぷよぷよ", genre: "パズル", user_id: user.id)
-Game.create!(name: "ドラゴンクエストⅤ", genre: "RPG", user_id: user.id)
-puts "初期データ投入完了"
+# user = User.first
+# Game.create!(name: "スーパーマリオワールド", genre: "アクション", user_id: user.id)
+# Game.create!(name: "ぷよぷよ", genre: "パズル", user_id: user.id)
+# Game.create!(name: "ドラゴンクエストⅤ", genre: "RPG", user_id: user.id)
+# puts "初期データ投入完了"
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
