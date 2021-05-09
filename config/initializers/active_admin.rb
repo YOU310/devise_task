@@ -1,6 +1,8 @@
 ActiveAdmin.setup do |config|
 
-  config.skip_before_action :authenticate_user!
+  # config.skip_before_action :authenticate_user!
+  # 「app/controllers/application_controller.rb」に「before_action :authenticate_user!」が入っている場合に必要
+  # 今回は「app/controller/games_controller.rb」にあるため不要
 
   # == Site Title
   #
